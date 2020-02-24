@@ -1,0 +1,9 @@
+*Telesat*, Project 5: _Flight Route Predictive Analytics Model for Telesat LEO_
+ Telesat has a need to develop a flight route predictive analytics model for Telesat LEO.  Telesat is launching a state-of-the-art satellite constellation of highly advanced satellites in low-earth-orbit (LEO) that will seamlessly integrate with terrestrial networks. The global network will deliver fiber quality throughput (Gbps links; low latency) anywhere on earth. This is a highly flexible system that dynamically allocates capacity where there’s demand, thus maximizing system efficiency. This is a future-proof solution to backhaul cellular traffic, and to provide high-speed broadband access to planes, ships and remote enterprise and government users. Capacity will be available as layer-2 connectivity for service providers to connect their end users.
+
+For the purposes of planning and design, we need to have an advanced knowledge of the flight routes, including the latitude and longitude position of an aircraft that is planned to receive service from the satellites. The satellites cover the entire globe with beams. Each coverage area can be estimated with a circle of 35 Km radius, approximately.
+
+The goal is to have a time-weighted probability distribution for each circle area corresponding to the number of planes that will be in the circle at any given time. Historical flight data is available from public and private sources. Flights over land are typically monitored via radar and accurate lat/lon positioning are available for them. Flights over the oceans follow different procedures for position reporting and reported lat/lon positions may be less accurate compared to radar-monitored flights. The goals of the project are:
+
+1) Provide flight route forecast and time-weighted probability distribution for each circular coverage area
+2) Provide visualization representing flight routes and density, including heat maps/flame charts for the circular coverage area

@@ -1,0 +1,40 @@
+\title{\textcolor{acolor}{\LARGE{\titlestring }}}
+
+\author{\ \\ \normalsize{\thestudents Patrick Boily} \\ \small{Department of Mathematics and Statistics, University of Ottawa}  \\ \ \\ \today }
+
+
+\renewcommand{\sectionmark}[1]{\markboth{\textsc{#1}}{}}
+\newcommand{\newl}{\newline\newline}
+
+\begin{document}
+
+
+\begingroup
+\let\center\flushleft
+\let\endcenter\endflushleft
+\maketitle
+\thispagestyle{fancy}
+\lhead{}
+\chead{\includegraphics[height=35pt]{Images/uOttawa}\hfill \includegraphics[height=35pt]{Images/dms}}
+\rhead{}
+\lfoot{\ }
+\cfoot{\footnotesize{STEM Complex, room 541 $-$ 150 Louis-Pasteur Pvt., 
+Ottawa, ON, Canada K1N 6N5 $-$ \newhref{mailto:pboily@uottawa.ca}{pboily@uottawa.ca}}}
+
+\endgroup
+\small
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\normalsize
+\newpage\noindent
+
+\pagestyle{fancy}
+\lhead[\textsc{\titlestring\thedraft}]{\theshortstudents P Boily}
+\rhead[\theshortstudents P Boily]{\leftmark}
+\chead{}
+\rfoot[\footnotesize\thepage]{\footnotesize{Project Number: \theprojectnumber \thedraft}}
+\cfoot{}
+\lfoot[\footnotesize{Project Number: \theprojectnumber  \thedraft}]{\footnotesize{\thepage}}

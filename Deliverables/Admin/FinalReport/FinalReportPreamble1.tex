@@ -1,0 +1,60 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBLE %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\expandafter\gdef\csname ver@amssymb.sty\endcsname{9999/12/31}
+\expandafter\gdef\csname ver@amsfonts.sty\endcsname{9999/12/31}
+
+\documentclass[12pt,twoside]{article}
+
+\global\expandafter\let\csname ver@amssymb.sty\endcsname\relax
+\global\expandafter\let\csname ver@amsfonts.sty\endcsname\relax
+
+\usepackage[small,bf]{caption}
+\usepackage[charter]{mathdesign}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{qtree}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+%\usepackage{amsthm}
+\usepackage{float}
+\usepackage{pdflscape}
+\usepackage[hidelinks]{hyperref}
+\usepackage{lipsum}
+\usepackage{enumitem}
+\setlength{\headheight}{40pt}
+
+\newtheorem{theorem}{Theorem}
+
+% PAGE DIMENSIONS
+\voffset=-.5in
+\hoffset=-.75in
+\oddsidemargin=0.65in
+\evensidemargin=0.65in
+\topmargin=-0.15in
+\textheight=9.1in
+\textwidth=6.7in
+
+% COLOUR STUFF
+\usepackage[dvipsnames]{xcolor}
+\definecolor{acolor}{RGB}{118,32,43} % Colour of the article title and sections
+\newcommand*{\newhref}[2]{\href{#1}{\textbf{\textcolor{acolor}{#2}}}}
+\newcommand{\localtextbulletone}{\textcolor{acolor}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
+\renewcommand{\labelitemi}{\localtextbulletone}
+
+\usepackage{sectsty}
+\sectionfont{\color{acolor}}  % sets colour of chapters
+\subsectionfont{\color{acolor}}  % sets colour of sections
+
+%\addto{\captionsenglish}{\renewcommand{\abstractname}{Summary}}
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  \textbf{\@title}
+  
+  \@author
+\end{flushleft}\egroup
+}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+\makeatother
